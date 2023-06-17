@@ -52,6 +52,7 @@ button,
 
 // Visibility
 .hide-for-mobile {
+
     // hide for tablet and mobile
     // hide if width is less than $medium
     @include breakpoint-down(medium) {
@@ -68,3 +69,22 @@ button,
         display: none;
     }
 }
+
+.overlay {
+    background: linear-gradient($dark-blue, transparent);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+
+.fadeout{
+    animation: fadeout 300ms ease forwards;
+}
+.fadein{
+    animation: fadein 300ms ease forwards;
+}
+
+
