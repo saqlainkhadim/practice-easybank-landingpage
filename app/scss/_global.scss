@@ -40,7 +40,7 @@ body {
 button,
 .button {
     padding: 0.9375rem 1.875rem;
-    border-radius: 50px;
+    border-radius: 3.1255rem;
     border: none;
     cursor: pointer;
     background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
@@ -56,7 +56,7 @@ button,
     // hide for tablet and mobile
     // hide if width is less than $medium
     @include breakpoint-down(medium) {
-        display: none;
+        display: none !important;
     }
 
 }
@@ -66,25 +66,31 @@ button,
     // hide for desktop viewport widths
     // hide if width is greater than $medium
     @include breakpoint-up(medium) {
-        display: none;
+        display: none !important;
     }
 }
 
 .overlay {
     background: linear-gradient($dark-blue, transparent);
     position: fixed;
-    top: 60px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     visibility: hidden;
 }
 
-.fadeout{
+.fadeout {
     animation: fadeout 300ms ease forwards;
 }
-.fadein{
+
+.fadein {
     animation: fadein 300ms ease forwards;
 }
 
-
+@include breakpoint-down(medium) {
+    .noscroll {
+        overflow: hidden;
+    }
+    
+}

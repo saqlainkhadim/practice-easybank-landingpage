@@ -20,8 +20,13 @@
     }
 
     nav {
-        padding: 24px;
-        z-index: 100;
+        padding: 1.5rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $white;
+
     }
 
     &__logo {
@@ -31,23 +36,61 @@
         }
     }
 
-    &__menu {
+    &__toggle {
 
         //for Mobile
         >span {
             background-color: black;
-            width: 25px;
-            height: 2px;
+            width: 1.5625rem;
+            height: 0.125rem;
             display: block;
             transition: all 300ms ease-in-out 100ms;
             transform-origin: 10%;
 
             &:not(:last-child) {
-                margin-bottom: 5px;
+                margin-bottom: 0.3125rem;
             }
         }
 
 
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 1.875rem;
+        position: fixed;
+        z-index: 2;
+        top: 6rem;
+        right: 2rem;
+        left: 2rem;
+        min-height: 12.5rem;
+        min-width: 12.5rem;
+        background-color: white;
+        border-radius: 0.3125rem;
+
+        a,
+        a:visited,
+        a:hover {
+            text-decoration: none;
+
+            color: black;
+            display: block;
+            font-size: $font-med;
+            color: $dark-blue;
+            margin-right: 0px !important;
+
+            &:first-child {
+                padding-top: 1.5rem;
+            }
+
+            &:last-child {
+                padding-bottom: 1.5rem;
+            }
+
+        }
     }
 
     &__links {
@@ -61,15 +104,15 @@
             color: inherit;
 
             &:not(:last-child) {
-                margin-right: 32px;
+                margin-right: 2rem;
             }
 
             &::after {
                 display: block;
                 content: "";
-                height: 4px;
+                height: 0.25rem;
                 position: absolute;
-                bottom: -20px;
+                bottom: -1.25rem;
                 left: 0;
                 right: 0;
                 opacity: 0;
