@@ -1,4 +1,8 @@
 .header {
+    max-width: 1135px;
+    margin: auto;
+    z-index: 1000;
+    position: relative;
 
     &.open {
         // hamburger to cross
@@ -76,7 +80,7 @@
         a:hover {
             text-decoration: none;
 
-            color: black;
+            color: $dark-blue;
             display: block;
             font-size: $font-med;
             color: $dark-blue;
@@ -131,11 +135,5 @@
         }
     }
 
-    &__cta {
-        transition: opacity 300ms;
-
-        &:hover {
-            opacity: 0.7;
-        }
-    }
+  
 }

@@ -10,6 +10,9 @@ html {
 *::after {
     box-sizing: inherit;
     font-family: 'Public Sans', sans-serif;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -19,6 +22,7 @@ body {
     font-size: $font-med;
     color: $grayish-blue;
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 .flex {
@@ -39,7 +43,7 @@ body {
 
 button,
 .button {
-    padding: 0.9375rem 1.875rem;
+    padding: 0.8rem 1.8rem;
     border-radius: 3.1255rem;
     border: none;
     cursor: pointer;
@@ -47,7 +51,16 @@ button,
     color: $white;
     font-weight: 400;
     font-size: $font-med;
+
+    &:hover {
+        transition: opacity 300ms;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
+
 
 
 // Visibility
@@ -65,7 +78,7 @@ button,
 
     // hide for desktop viewport widths
     // hide if width is greater than $medium
-    @include breakpoint-up(medium) {
+    @include breakpoint-up(large) {
         display: none !important;
     }
 }
@@ -80,6 +93,41 @@ button,
     visibility: hidden;
 }
 
+.container {
+    max-width: 69.375rem;
+    margin: 0 auto;
+
+    &--pall {
+        padding: 2.5rem 1.5rem;
+    }
+
+    &--px {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    &--py {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    &--pt {
+        padding-top: 2.5rem;
+    }
+
+    &--pb {
+        padding-bottom: 2.5rem;
+    }
+
+    &--pl {
+        padding-left: 1.5rem;
+    }
+
+    &--pr {
+        padding-right: 1.5rem;
+    }
+}
+
 .fadeout {
     animation: fadeout 300ms ease forwards;
 }
@@ -92,5 +140,4 @@ button,
     .noscroll {
         overflow: hidden;
     }
-    
 }
