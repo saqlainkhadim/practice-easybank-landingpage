@@ -61,6 +61,40 @@ button,
     }
 }
 
+// Text
+h1,
+h2,
+h3 {
+    line-height: 1.15;
+    color: $dark-blue;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 1.875rem;
+    @include breakpoint-up(large) {
+        font-size: $font-xlg;
+    }
+}
+
+
+h2 {
+    font-size: 1.875rem;
+    margin-bottom: 1.5625rem;
+    @include breakpoint-up(large) {
+        font-size: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    @include breakpoint-up(large) {
+        font-size: 1.25rem;
+
+    }
+}
 
 
 // Visibility
