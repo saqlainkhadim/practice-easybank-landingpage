@@ -1,18 +1,15 @@
 .feature {
-    background-color: $light-grayish-blue;    
-    padding-top: 3.75rem;
+    background-color: $light-grayish-blue;
     padding-bottom: 3.75rem;
     text-align: center;
 
     @include breakpoint-up(large) {
-        padding-top: 5.625rem;
         padding-bottom: 5.625rem;
         text-align: left;
     }
 
     &__intro {
         margin-bottom: 4.375rem;
-
         @include breakpoint-up(large) {
             max-width: 60%;
         }

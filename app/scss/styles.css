@@ -110,9 +110,11 @@ h1 {
 h2 {
   font-size: 1.875rem;
   margin-bottom: 1.5625rem;
+  padding-top: 3.75rem;
 }
 @media (min-width: 64em) {
   h2 {
+    padding-top: 5.625rem;
     font-size: 2.25rem;
     margin-bottom: 2.25rem;
   }
@@ -411,13 +413,11 @@ p {
 
 .feature {
   background-color: hsl(220, 16%, 96%);
-  padding-top: 3.75rem;
   padding-bottom: 3.75rem;
   text-align: center;
 }
 @media (min-width: 64em) {
   .feature {
-    padding-top: 5.625rem;
     padding-bottom: 5.625rem;
     text-align: left;
   }
@@ -479,4 +479,50 @@ p {
   .feature__description {
     font-size: 1rem;
   }
+}
+
+.article h2 {
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .article h2 {
+    text-align: left;
+  }
+}
+.article__grid {
+  display: grid;
+  gap: 1.875rem;
+}
+@media (min-width: 40em) {
+  .article__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 64em) {
+  .article__grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.article__image > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.25rem;
+}
+.article__detail {
+  padding: 1.5625rem;
+}
+.article__author {
+  font-size: 0.625rem;
+  padding-bottom: 0.875rem;
+}
+.article__title {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: hsl(233, 26%, 24%);
+  padding-bottom: 0.75rem;
+}
+.article__description {
+  font-size: 0.875rem;
+  line-height: 1.5;
 }/*# sourceMappingURL=styles.css.map */
