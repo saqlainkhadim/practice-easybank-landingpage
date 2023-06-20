@@ -194,7 +194,7 @@ p {
   }
 }
 .header {
-  max-width: 1135px;
+  max-width: 70.9375rem;
   margin: auto;
   z-index: 1000;
   position: relative;
@@ -525,4 +525,72 @@ p {
 .article__description {
   font-size: 0.875rem;
   line-height: 1.5;
+}
+
+.footer {
+  background-color: hsl(233, 26%, 24%);
+  text-align: center;
+  color: hsl(0, 0%, 98%);
+}
+@media (min-width: 40em) {
+  .footer .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 3fr;
+    grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
+  }
+}
+.footer__links a,
+.footer__links a:hover,
+.footer__links a:visited {
+  color: white;
+  display: block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.footer__links a:hover,
+.footer__links a:hover:hover,
+.footer__links a:visited:hover {
+  color: hsl(136, 65%, 51%);
+}
+.footer__links a {
+  margin-bottom: 1.25rem;
+}
+.footer .col1 {
+  grid-area: links1;
+}
+.footer .col2 {
+  grid-area: links2;
+}
+.footer .col2 a:last-child {
+  margin-bottom: 1.875rem;
+}
+.footer__logo {
+  display: block;
+  margin-bottom: 1.875rem;
+  grid-area: logo;
+}
+.footer__social {
+  grid-area: social;
+  display: inline-block;
+  margin-bottom: 1.875rem;
+}
+.footer__social a {
+  display: inline-block;
+}
+.footer__social a:not(:last-child) {
+  padding-right: 0.875rem;
+}
+.footer__social a:hover svg path {
+  fill: hsl(136, 65%, 51%);
+}
+.footer__cta {
+  grid-area: cta;
+  margin-bottom: 1.875rem;
+}
+.footer__copyright {
+  grid-area: copyright;
+  font-size: 0.75rem;
 }/*# sourceMappingURL=styles.css.map */
